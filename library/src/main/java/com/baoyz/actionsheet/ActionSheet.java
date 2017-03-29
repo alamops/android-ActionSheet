@@ -262,6 +262,7 @@ public class ActionSheet extends Fragment implements View.OnClickListener {
                 bt.setText(titles[i]);
                 bt.setTextColor(mAttrs.otherButtonTextColor);
                 bt.setTextSize(TypedValue.COMPLEX_UNIT_PX, mAttrs.actionSheetTextSize);
+                bt.setAllCaps(false);
                 if (i > 0) {
                     LinearLayout.LayoutParams params = createButtonLayoutParams();
                     params.topMargin = mAttrs.otherButtonSpacing;
@@ -279,6 +280,7 @@ public class ActionSheet extends Fragment implements View.OnClickListener {
         bt.setText(getCancelButtonTitle());
         bt.setTextColor(mAttrs.cancelButtonTextColor);
         bt.setOnClickListener(this);
+        bt.setAllCaps(false);
         LinearLayout.LayoutParams params = createButtonLayoutParams();
         params.topMargin = mAttrs.cancelButtonMarginTop;
         mPanel.addView(bt, params);
